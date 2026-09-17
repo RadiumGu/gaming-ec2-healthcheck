@@ -1,0 +1,7 @@
+{"kind": "put", "metric": "PublishLatencyProbe-f0496e39265d", "t_put": 1789636701.3202574, "resolution_s": 60, "t_wall": 1789636701.3202589}
+{"kind": "visible", "metric": "PublishLatencyProbe-f0496e39265d", "t_visible": 1789636702.3680272, "publish_latency_s": 1.048, "polls": 2, "values": [1.0], "t_wall": 1789636702.3680346}
+{"kind": "put", "metric": "PublishLatencyProbe-1b998d9dce07", "t_put": 1789636712.4123209, "resolution_s": 60, "t_wall": 1789636712.4123223}
+{"kind": "visible", "metric": "PublishLatencyProbe-1b998d9dce07", "t_visible": 1789636713.460095, "publish_latency_s": 1.048, "polls": 2, "values": [1.0], "t_wall": 1789636713.460102}
+{"kind": "put", "metric": "PublishLatencyProbe-d40b19d550fe", "t_put": 1789636723.4970653, "resolution_s": 60, "t_wall": 1789636723.4970667}
+{"kind": "visible", "metric": "PublishLatencyProbe-d40b19d550fe", "t_visible": 1789636724.5426514, "publish_latency_s": 1.046, "polls": 2, "values": [1.0], "t_wall": 1789636724.5426586}
+{"kind": "summary", "resolution_s": 60, "n": 3, "min_s": 1.046, "median_s": 1.048, "max_s": 1.048, "note": "n>=3，可作范围陈述", "t_wall": 1789636724.5427275}

@@ -1,0 +1,5 @@
+{
+    "Status": "Success",
+    "Out": "ExecStart=/usr/bin/python3 /opt/gameserver/game_stub.py --health-port 8080 --game-port 7777 --stall-after 15\n{\"tick\": 40, \"loop_lag_ms\": 0.006, \"players\": 803, \"pid\": 27090, \"started_at\": 1789622301.3263733, \"stalled\": false}",
+    "Err": ""
+}

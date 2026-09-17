@@ -1,0 +1,14 @@
+{
+  "description": "ec2-failure drill D9: verify prober storage side-channel detects stalled volume IO",
+  "targets": { "TargetVolume": {
+    "resourceType": "aws:ec2:ebs-volume",
+    "resourceArns": ["arn:aws:ec2:ap-northeast-1:111122223333:volume/vol-REDACTED000000004"],
+    "selectionMode": "ALL" } },
+  "actions": { "pauseIO": {
+    "actionId": "aws:ebs:pause-volume-io",
+    "parameters": { "duration": "PT3M" },
+    "targets": { "Volumes": "TargetVolume" } } },
+  "stopConditions": [ { "source": "none" } ],
+  "roleArn": "arn:aws:iam::111122223333:role/your-fis-role",
+  "tags": { "Project": "ec2-failure-drill", "Name": "d9-pause-volume-io" }
+}

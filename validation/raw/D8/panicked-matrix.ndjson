@@ -1,0 +1,58 @@
+{"schema": "stop_matrix/1", "kind": "run_begin", "t": "2026-09-17T07:04:43.033Z", "ts": 1789628683.033, "instance_id": "i-TARGET00000000002", "guest_state": "panicked", "modes": ["force", "skip_os"], "reps": 2, "region": "ap-northeast-1"}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T07:04:43.033Z", "ts": 1789628683.033, "guest_state": "panicked", "mode": "force", "rep": 1, "stop_kwargs": {"Force": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:04:43.230Z", "ts": 1789628683.23, "tag": "prep_app", "tick": 2415, "since_s": 0.002}
+{"schema": "stop_matrix/1", "kind": "ssm_done", "t": "2026-09-17T07:04:47.435Z", "ts": 1789628687.436, "tag": "set_panic_0", "status": "Success", "out": "kernel.panic = 0\nkernel.panic = 0\n", "err": ""}
+{"schema": "stop_matrix/1", "kind": "ssm_sent", "t": "2026-09-17T07:04:47.511Z", "ts": 1789628687.512, "tag": "panic", "command_id": "1a7ba72e-27e7-44a9-a01b-8121ae0b8a42", "wait": false}
+{"schema": "stop_matrix/1", "kind": "panicked_confirmed", "t": "2026-09-17T07:04:58.521Z", "ts": 1789628698.522, "after_s": 11.01}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T07:04:58.974Z", "ts": 1789628698.975, "tag": "panicked/force/#1", "stop_kwargs": {"Force": true}, "api_s": 0.453}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:04:59.046Z", "ts": 1789628699.047, "tag": "stop:panicked/force/#1", "state": "running", "since_s": 0.072}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:05:00.183Z", "ts": 1789628700.184, "tag": "stop:panicked/force/#1", "state": "stopping", "since_s": 1.209}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:09:09.292Z", "ts": 1789628949.293, "tag": "stop:panicked/force/#1", "state": "stopped", "since_s": 250.318}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:09:10.286Z", "ts": 1789628950.287, "tag": "start:panicked/force/#1", "state": "stopped", "since_s": 0.062}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:09:11.350Z", "ts": 1789628951.35, "tag": "start:panicked/force/#1", "state": "pending", "since_s": 1.125}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:09:13.589Z", "ts": 1789628953.589, "tag": "start:panicked/force/#1", "state": "running", "since_s": 3.364}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:09:20.599Z", "ts": 1789628960.599, "tag": "app:panicked/force/#1", "tick": 18, "since_s": 7.01}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T07:09:21.601Z", "ts": 1789628961.602, "guest_state": "panicked", "mode": "force", "rep": 1, "stop_kwargs": {"Force": true}, "stop_api_seconds": 0.453, "stop_seconds": 250.318, "start_seconds": 3.364, "app_ready_seconds": 8.013}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T07:09:21.601Z", "ts": 1789628961.602, "guest_state": "panicked", "mode": "skip_os", "rep": 1, "stop_kwargs": {"SkipOsShutdown": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:09:21.661Z", "ts": 1789628961.661, "tag": "prep_app", "tick": 39, "since_s": 0.001}
+{"schema": "stop_matrix/1", "kind": "ssm_done", "t": "2026-09-17T07:09:25.824Z", "ts": 1789628965.825, "tag": "set_panic_0", "status": "Success", "out": "kernel.panic = 0\nkernel.panic = 0\n", "err": ""}
+{"schema": "stop_matrix/1", "kind": "ssm_sent", "t": "2026-09-17T07:09:25.896Z", "ts": 1789628965.897, "tag": "panic", "command_id": "3a828cf0-5ff4-4505-9a77-24faf228531f", "wait": false}
+{"schema": "stop_matrix/1", "kind": "panicked_confirmed", "t": "2026-09-17T07:09:36.909Z", "ts": 1789628976.909, "after_s": 11.012}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T07:09:37.450Z", "ts": 1789628977.451, "tag": "panicked/skip_os/#1", "stop_kwargs": {"SkipOsShutdown": true}, "api_s": 0.541}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:09:37.515Z", "ts": 1789628977.516, "tag": "stop:panicked/skip_os/#1", "state": "running", "since_s": 0.065}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:09:38.633Z", "ts": 1789628978.634, "tag": "stop:panicked/skip_os/#1", "state": "stopping", "since_s": 1.183}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:09:48.288Z", "ts": 1789628988.289, "tag": "stop:panicked/skip_os/#1", "state": "stopped", "since_s": 10.838}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:09:49.339Z", "ts": 1789628989.34, "tag": "start:panicked/skip_os/#1", "state": "stopped", "since_s": 0.053}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:09:50.406Z", "ts": 1789628990.406, "tag": "start:panicked/skip_os/#1", "state": "pending", "since_s": 1.119}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:09:52.576Z", "ts": 1789628992.576, "tag": "start:panicked/skip_os/#1", "state": "running", "since_s": 3.289}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:09:58.645Z", "ts": 1789628998.646, "tag": "app:panicked/skip_os/#1", "tick": 7, "since_s": 6.069}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T07:09:59.648Z", "ts": 1789628999.648, "guest_state": "panicked", "mode": "skip_os", "rep": 1, "stop_kwargs": {"SkipOsShutdown": true}, "stop_api_seconds": 0.541, "stop_seconds": 10.838, "start_seconds": 3.29, "app_ready_seconds": 7.072}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T07:09:59.648Z", "ts": 1789628999.648, "guest_state": "panicked", "mode": "force", "rep": 2, "stop_kwargs": {"Force": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:09:59.716Z", "ts": 1789628999.716, "tag": "prep_app", "tick": 28, "since_s": 0.001}
+{"schema": "stop_matrix/1", "kind": "ssm_done", "t": "2026-09-17T07:10:03.888Z", "ts": 1789629003.888, "tag": "set_panic_0", "status": "Success", "out": "kernel.panic = 0\nkernel.panic = 0\n", "err": ""}
+{"schema": "stop_matrix/1", "kind": "ssm_sent", "t": "2026-09-17T07:10:03.951Z", "ts": 1789629003.951, "tag": "panic", "command_id": "f509864f-219c-4eb2-93f1-778b5dcd49f1", "wait": false}
+{"schema": "stop_matrix/1", "kind": "panicked_confirmed", "t": "2026-09-17T07:10:14.961Z", "ts": 1789629014.962, "after_s": 11.011}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T07:10:15.408Z", "ts": 1789629015.409, "tag": "panicked/force/#2", "stop_kwargs": {"Force": true}, "api_s": 0.447}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:10:15.473Z", "ts": 1789629015.473, "tag": "stop:panicked/force/#2", "state": "running", "since_s": 0.064}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:10:16.539Z", "ts": 1789629016.54, "tag": "stop:panicked/force/#2", "state": "stopping", "since_s": 1.131}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:14:29.484Z", "ts": 1789629269.485, "tag": "stop:panicked/force/#2", "state": "stopped", "since_s": 254.076}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:14:30.625Z", "ts": 1789629270.625, "tag": "start:panicked/force/#2", "state": "pending", "since_s": 0.202}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:14:33.889Z", "ts": 1789629273.889, "tag": "start:panicked/force/#2", "state": "running", "since_s": 3.466}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:14:39.926Z", "ts": 1789629279.926, "tag": "app:panicked/force/#2", "tick": 10, "since_s": 6.037}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T07:14:40.928Z", "ts": 1789629280.929, "guest_state": "panicked", "mode": "force", "rep": 2, "stop_kwargs": {"Force": true}, "stop_api_seconds": 0.447, "stop_seconds": 254.076, "start_seconds": 3.466, "app_ready_seconds": 7.04}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T07:14:40.929Z", "ts": 1789629280.929, "guest_state": "panicked", "mode": "skip_os", "rep": 2, "stop_kwargs": {"SkipOsShutdown": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:14:40.998Z", "ts": 1789629280.999, "tag": "prep_app", "tick": 32, "since_s": 0.002}
+{"schema": "stop_matrix/1", "kind": "ssm_done", "t": "2026-09-17T07:14:45.179Z", "ts": 1789629285.179, "tag": "set_panic_0", "status": "Success", "out": "kernel.panic = 0\nkernel.panic = 0\n", "err": ""}
+{"schema": "stop_matrix/1", "kind": "ssm_sent", "t": "2026-09-17T07:14:45.245Z", "ts": 1789629285.246, "tag": "panic", "command_id": "09a4e8c2-38c6-4cd4-ba70-840fc5ee9ce6", "wait": false}
+{"schema": "stop_matrix/1", "kind": "panicked_confirmed", "t": "2026-09-17T07:14:56.259Z", "ts": 1789629296.259, "after_s": 11.013}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T07:14:56.701Z", "ts": 1789629296.702, "tag": "panicked/skip_os/#2", "stop_kwargs": {"SkipOsShutdown": true}, "api_s": 0.443}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:14:56.765Z", "ts": 1789629296.765, "tag": "stop:panicked/skip_os/#2", "state": "running", "since_s": 0.063}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:14:57.870Z", "ts": 1789629297.871, "tag": "stop:panicked/skip_os/#2", "state": "stopping", "since_s": 1.169}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:15:08.768Z", "ts": 1789629308.768, "tag": "stop:panicked/skip_os/#2", "state": "stopped", "since_s": 12.067}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:15:09.828Z", "ts": 1789629309.828, "tag": "start:panicked/skip_os/#2", "state": "stopped", "since_s": 0.084}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:15:10.897Z", "ts": 1789629310.898, "tag": "start:panicked/skip_os/#2", "state": "pending", "since_s": 1.153}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:15:13.092Z", "ts": 1789629313.093, "tag": "start:panicked/skip_os/#2", "state": "running", "since_s": 3.348}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:15:19.106Z", "ts": 1789629319.107, "tag": "app:panicked/skip_os/#2", "tick": 2, "since_s": 6.014}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T07:15:20.109Z", "ts": 1789629320.109, "guest_state": "panicked", "mode": "skip_os", "rep": 2, "stop_kwargs": {"SkipOsShutdown": true}, "stop_api_seconds": 0.443, "stop_seconds": 12.067, "start_seconds": 3.348, "app_ready_seconds": 7.016}
+{"schema": "stop_matrix/1", "kind": "summary", "t": "2026-09-17T07:15:20.109Z", "ts": 1789629320.109, "stop_seconds_by_group": {"panicked/force": {"n": 2, "min": 250.318, "median": 252.197, "max": 254.076, "values": [250.318, 254.076]}, "panicked/skip_os": {"n": 2, "min": 10.838, "median": 11.453, "max": 12.067, "values": [10.838, 12.067]}}, "note": "n 小于 3 的组不足以支撑倍数比较，只能作为单点观测报告"}
+{"schema": "stop_matrix/1", "kind": "run_end", "t": "2026-09-17T07:15:20.109Z", "ts": 1789629320.109, "trials": 4}

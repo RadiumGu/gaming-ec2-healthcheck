@@ -1,0 +1,135 @@
+{"schema": "stop_matrix/1", "kind": "run_begin", "t": "2026-09-17T06:57:12.044Z", "ts": 1789628232.044, "instance_id": "i-TARGET00000000002", "guest_state": "healthy", "modes": ["plain", "force", "skip_os", "force_skip"], "reps": 3, "region": "ap-northeast-1"}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T06:57:12.044Z", "ts": 1789628232.045, "guest_state": "healthy", "mode": "plain", "rep": 1, "stop_kwargs": {}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T06:57:12.195Z", "ts": 1789628232.195, "tag": "prep_app", "tick": 182, "since_s": 0.002}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T06:57:13.672Z", "ts": 1789628233.672, "tag": "healthy/plain/#1", "stop_kwargs": {}, "api_s": 0.441}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:57:13.743Z", "ts": 1789628233.743, "tag": "stop:healthy/plain/#1", "state": "running", "since_s": 0.071}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:57:14.852Z", "ts": 1789628234.852, "tag": "stop:healthy/plain/#1", "state": "stopping", "since_s": 1.18}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:57:30.029Z", "ts": 1789628250.029, "tag": "stop:healthy/plain/#1", "state": "stopped", "since_s": 16.357}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:57:31.054Z", "ts": 1789628251.055, "tag": "start:healthy/plain/#1", "state": "stopped", "since_s": 0.069}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:57:32.115Z", "ts": 1789628252.115, "tag": "start:healthy/plain/#1", "state": "pending", "since_s": 1.129}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:57:34.341Z", "ts": 1789628254.342, "tag": "start:healthy/plain/#1", "state": "running", "since_s": 3.356}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T06:57:39.402Z", "ts": 1789628259.402, "tag": "app:healthy/plain/#1", "tick": 1, "since_s": 5.061}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T06:57:40.405Z", "ts": 1789628260.405, "guest_state": "healthy", "mode": "plain", "rep": 1, "stop_kwargs": {}, "stop_api_seconds": 0.441, "stop_seconds": 16.357, "start_seconds": 3.356, "app_ready_seconds": 6.063}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T06:57:40.405Z", "ts": 1789628260.405, "guest_state": "healthy", "mode": "force", "rep": 1, "stop_kwargs": {"Force": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T06:57:40.462Z", "ts": 1789628260.463, "tag": "prep_app", "tick": 22, "since_s": 0.002}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T06:57:41.918Z", "ts": 1789628261.919, "tag": "healthy/force/#1", "stop_kwargs": {"Force": true}, "api_s": 0.429}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:57:42.026Z", "ts": 1789628262.027, "tag": "stop:healthy/force/#1", "state": "running", "since_s": 0.108}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:57:43.099Z", "ts": 1789628263.1, "tag": "stop:healthy/force/#1", "state": "stopping", "since_s": 1.181}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:00.539Z", "ts": 1789628280.54, "tag": "stop:healthy/force/#1", "state": "stopped", "since_s": 18.621}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:01.603Z", "ts": 1789628281.604, "tag": "start:healthy/force/#1", "state": "stopped", "since_s": 0.085}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:02.684Z", "ts": 1789628282.684, "tag": "start:healthy/force/#1", "state": "pending", "since_s": 1.166}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:05.035Z", "ts": 1789628285.035, "tag": "start:healthy/force/#1", "state": "running", "since_s": 3.517}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T06:58:11.046Z", "ts": 1789628291.046, "tag": "app:healthy/force/#1", "tick": 1, "since_s": 6.011}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T06:58:12.048Z", "ts": 1789628292.049, "guest_state": "healthy", "mode": "force", "rep": 1, "stop_kwargs": {"Force": true}, "stop_api_seconds": 0.429, "stop_seconds": 18.621, "start_seconds": 3.517, "app_ready_seconds": 7.014}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T06:58:12.048Z", "ts": 1789628292.049, "guest_state": "healthy", "mode": "skip_os", "rep": 1, "stop_kwargs": {"SkipOsShutdown": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T06:58:12.131Z", "ts": 1789628292.132, "tag": "prep_app", "tick": 23, "since_s": 0.001}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T06:58:13.647Z", "ts": 1789628293.648, "tag": "healthy/skip_os/#1", "stop_kwargs": {"SkipOsShutdown": true}, "api_s": 0.495}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:13.720Z", "ts": 1789628293.72, "tag": "stop:healthy/skip_os/#1", "state": "running", "since_s": 0.072}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:14.840Z", "ts": 1789628294.84, "tag": "stop:healthy/skip_os/#1", "state": "stopping", "since_s": 1.192}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:25.643Z", "ts": 1789628305.644, "tag": "stop:healthy/skip_os/#1", "state": "stopped", "since_s": 11.996}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:26.667Z", "ts": 1789628306.667, "tag": "start:healthy/skip_os/#1", "state": "stopped", "since_s": 0.072}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:27.745Z", "ts": 1789628307.746, "tag": "start:healthy/skip_os/#1", "state": "pending", "since_s": 1.15}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:29.932Z", "ts": 1789628309.932, "tag": "start:healthy/skip_os/#1", "state": "running", "since_s": 3.337}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T06:58:36.007Z", "ts": 1789628316.007, "tag": "app:healthy/skip_os/#1", "tick": 6, "since_s": 6.075}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T06:58:37.009Z", "ts": 1789628317.01, "guest_state": "healthy", "mode": "skip_os", "rep": 1, "stop_kwargs": {"SkipOsShutdown": true}, "stop_api_seconds": 0.495, "stop_seconds": 11.996, "start_seconds": 3.337, "app_ready_seconds": 7.078}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T06:58:37.009Z", "ts": 1789628317.01, "guest_state": "healthy", "mode": "force_skip", "rep": 1, "stop_kwargs": {"Force": true, "SkipOsShutdown": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T06:58:37.079Z", "ts": 1789628317.079, "tag": "prep_app", "tick": 27, "since_s": 0.001}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T06:58:38.617Z", "ts": 1789628318.617, "tag": "healthy/force_skip/#1", "stop_kwargs": {"Force": true, "SkipOsShutdown": true}, "api_s": 0.512}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:38.689Z", "ts": 1789628318.69, "tag": "stop:healthy/force_skip/#1", "state": "running", "since_s": 0.072}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:39.837Z", "ts": 1789628319.838, "tag": "stop:healthy/force_skip/#1", "state": "stopping", "since_s": 1.22}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:49.585Z", "ts": 1789628329.586, "tag": "stop:healthy/force_skip/#1", "state": "stopped", "since_s": 10.969}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:50.590Z", "ts": 1789628330.59, "tag": "start:healthy/force_skip/#1", "state": "stopped", "since_s": 0.068}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:51.666Z", "ts": 1789628331.667, "tag": "start:healthy/force_skip/#1", "state": "pending", "since_s": 1.145}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:58:53.919Z", "ts": 1789628333.92, "tag": "start:healthy/force_skip/#1", "state": "running", "since_s": 3.398}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T06:59:00.014Z", "ts": 1789628340.014, "tag": "app:healthy/force_skip/#1", "tick": 17, "since_s": 6.095}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T06:59:01.016Z", "ts": 1789628341.017, "guest_state": "healthy", "mode": "force_skip", "rep": 1, "stop_kwargs": {"Force": true, "SkipOsShutdown": true}, "stop_api_seconds": 0.512, "stop_seconds": 10.969, "start_seconds": 3.398, "app_ready_seconds": 7.097}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T06:59:01.016Z", "ts": 1789628341.017, "guest_state": "healthy", "mode": "plain", "rep": 2, "stop_kwargs": {}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T06:59:01.096Z", "ts": 1789628341.096, "tag": "prep_app", "tick": 38, "since_s": 0.001}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T06:59:02.718Z", "ts": 1789628342.719, "tag": "healthy/plain/#2", "stop_kwargs": {}, "api_s": 0.592}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:02.805Z", "ts": 1789628342.805, "tag": "stop:healthy/plain/#2", "state": "running", "since_s": 0.086}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:03.862Z", "ts": 1789628343.862, "tag": "stop:healthy/plain/#2", "state": "stopping", "since_s": 1.143}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:16.889Z", "ts": 1789628356.89, "tag": "stop:healthy/plain/#2", "state": "stopped", "since_s": 14.171}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:17.885Z", "ts": 1789628357.886, "tag": "start:healthy/plain/#2", "state": "stopped", "since_s": 0.062}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:19.047Z", "ts": 1789628359.047, "tag": "start:healthy/plain/#2", "state": "pending", "since_s": 1.224}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:21.227Z", "ts": 1789628361.228, "tag": "start:healthy/plain/#2", "state": "running", "since_s": 3.404}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T06:59:27.236Z", "ts": 1789628367.236, "tag": "app:healthy/plain/#2", "tick": 3, "since_s": 6.009}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T06:59:28.238Z", "ts": 1789628368.239, "guest_state": "healthy", "mode": "plain", "rep": 2, "stop_kwargs": {}, "stop_api_seconds": 0.592, "stop_seconds": 14.171, "start_seconds": 3.405, "app_ready_seconds": 7.011}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T06:59:28.238Z", "ts": 1789628368.239, "guest_state": "healthy", "mode": "force", "rep": 2, "stop_kwargs": {"Force": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T06:59:28.305Z", "ts": 1789628368.305, "tag": "prep_app", "tick": 24, "since_s": 0.001}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T06:59:29.750Z", "ts": 1789628369.75, "tag": "healthy/force/#2", "stop_kwargs": {"Force": true}, "api_s": 0.412}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:29.816Z", "ts": 1789628369.816, "tag": "stop:healthy/force/#2", "state": "running", "since_s": 0.066}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:30.878Z", "ts": 1789628370.878, "tag": "stop:healthy/force/#2", "state": "stopping", "since_s": 1.128}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:50.298Z", "ts": 1789628390.298, "tag": "stop:healthy/force/#2", "state": "stopped", "since_s": 20.548}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:51.310Z", "ts": 1789628391.31, "tag": "start:healthy/force/#2", "state": "stopped", "since_s": 0.067}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:52.368Z", "ts": 1789628392.368, "tag": "start:healthy/force/#2", "state": "pending", "since_s": 1.125}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T06:59:54.560Z", "ts": 1789628394.561, "tag": "start:healthy/force/#2", "state": "running", "since_s": 3.317}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:00:00.568Z", "ts": 1789628400.569, "tag": "app:healthy/force/#2", "tick": 8, "since_s": 6.008}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T07:00:01.570Z", "ts": 1789628401.571, "guest_state": "healthy", "mode": "force", "rep": 2, "stop_kwargs": {"Force": true}, "stop_api_seconds": 0.412, "stop_seconds": 20.548, "start_seconds": 3.317, "app_ready_seconds": 7.01}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T07:00:01.570Z", "ts": 1789628401.571, "guest_state": "healthy", "mode": "skip_os", "rep": 2, "stop_kwargs": {"SkipOsShutdown": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:00:01.625Z", "ts": 1789628401.626, "tag": "prep_app", "tick": 29, "since_s": 0.001}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T07:00:03.092Z", "ts": 1789628403.092, "tag": "healthy/skip_os/#2", "stop_kwargs": {"SkipOsShutdown": true}, "api_s": 0.441}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:03.163Z", "ts": 1789628403.163, "tag": "stop:healthy/skip_os/#2", "state": "running", "since_s": 0.071}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:04.280Z", "ts": 1789628404.281, "tag": "stop:healthy/skip_os/#2", "state": "stopping", "since_s": 1.188}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:11.780Z", "ts": 1789628411.781, "tag": "stop:healthy/skip_os/#2", "state": "stopped", "since_s": 8.688}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:12.843Z", "ts": 1789628412.844, "tag": "start:healthy/skip_os/#2", "state": "stopped", "since_s": 0.055}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:13.910Z", "ts": 1789628413.911, "tag": "start:healthy/skip_os/#2", "state": "pending", "since_s": 1.123}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:16.067Z", "ts": 1789628416.067, "tag": "start:healthy/skip_os/#2", "state": "running", "since_s": 3.279}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:00:22.084Z", "ts": 1789628422.085, "tag": "app:healthy/skip_os/#2", "tick": 18, "since_s": 6.017}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T07:00:23.087Z", "ts": 1789628423.087, "guest_state": "healthy", "mode": "skip_os", "rep": 2, "stop_kwargs": {"SkipOsShutdown": true}, "stop_api_seconds": 0.441, "stop_seconds": 8.688, "start_seconds": 3.279, "app_ready_seconds": 7.02}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T07:00:23.087Z", "ts": 1789628423.087, "guest_state": "healthy", "mode": "force_skip", "rep": 2, "stop_kwargs": {"Force": true, "SkipOsShutdown": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:00:23.143Z", "ts": 1789628423.144, "tag": "prep_app", "tick": 39, "since_s": 0.002}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T07:00:24.647Z", "ts": 1789628424.647, "tag": "healthy/force_skip/#2", "stop_kwargs": {"Force": true, "SkipOsShutdown": true}, "api_s": 0.478}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:24.720Z", "ts": 1789628424.72, "tag": "stop:healthy/force_skip/#2", "state": "running", "since_s": 0.073}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:25.821Z", "ts": 1789628425.822, "tag": "stop:healthy/force_skip/#2", "state": "stopping", "since_s": 1.175}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:30.114Z", "ts": 1789628430.114, "tag": "stop:healthy/force_skip/#2", "state": "stopped", "since_s": 5.467}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:31.164Z", "ts": 1789628431.165, "tag": "start:healthy/force_skip/#2", "state": "stopped", "since_s": 0.067}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:32.231Z", "ts": 1789628432.231, "tag": "start:healthy/force_skip/#2", "state": "pending", "since_s": 1.133}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:34.394Z", "ts": 1789628434.394, "tag": "start:healthy/force_skip/#2", "state": "running", "since_s": 3.296}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:00:40.406Z", "ts": 1789628440.406, "tag": "app:healthy/force_skip/#2", "tick": 2, "since_s": 6.012}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T07:00:41.408Z", "ts": 1789628441.409, "guest_state": "healthy", "mode": "force_skip", "rep": 2, "stop_kwargs": {"Force": true, "SkipOsShutdown": true}, "stop_api_seconds": 0.478, "stop_seconds": 5.467, "start_seconds": 3.296, "app_ready_seconds": 7.015}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T07:00:41.408Z", "ts": 1789628441.409, "guest_state": "healthy", "mode": "plain", "rep": 3, "stop_kwargs": {}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:00:41.465Z", "ts": 1789628441.465, "tag": "prep_app", "tick": 23, "since_s": 0.001}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T07:00:42.908Z", "ts": 1789628442.909, "tag": "healthy/plain/#3", "stop_kwargs": {}, "api_s": 0.419}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:42.962Z", "ts": 1789628442.962, "tag": "stop:healthy/plain/#3", "state": "running", "since_s": 0.053}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:00:44.037Z", "ts": 1789628444.038, "tag": "stop:healthy/plain/#3", "state": "stopping", "since_s": 1.129}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:01.116Z", "ts": 1789628461.116, "tag": "stop:healthy/plain/#3", "state": "stopped", "since_s": 18.207}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:02.222Z", "ts": 1789628462.223, "tag": "start:healthy/plain/#3", "state": "stopped", "since_s": 0.058}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:03.288Z", "ts": 1789628463.288, "tag": "start:healthy/plain/#3", "state": "pending", "since_s": 1.124}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:05.484Z", "ts": 1789628465.484, "tag": "start:healthy/plain/#3", "state": "running", "since_s": 3.32}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:01:11.492Z", "ts": 1789628471.492, "tag": "app:healthy/plain/#3", "tick": 16, "since_s": 6.008}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T07:01:12.494Z", "ts": 1789628472.495, "guest_state": "healthy", "mode": "plain", "rep": 3, "stop_kwargs": {}, "stop_api_seconds": 0.419, "stop_seconds": 18.207, "start_seconds": 3.32, "app_ready_seconds": 7.011}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T07:01:12.495Z", "ts": 1789628472.495, "guest_state": "healthy", "mode": "force", "rep": 3, "stop_kwargs": {"Force": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:01:12.625Z", "ts": 1789628472.625, "tag": "prep_app", "tick": 38, "since_s": 0.001}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T07:01:14.129Z", "ts": 1789628474.13, "tag": "healthy/force/#3", "stop_kwargs": {"Force": true}, "api_s": 0.483}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:14.268Z", "ts": 1789628474.268, "tag": "stop:healthy/force/#3", "state": "running", "since_s": 0.138}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:15.349Z", "ts": 1789628475.349, "tag": "stop:healthy/force/#3", "state": "stopping", "since_s": 1.219}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:30.437Z", "ts": 1789628490.438, "tag": "stop:healthy/force/#3", "state": "stopped", "since_s": 16.308}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:31.462Z", "ts": 1789628491.463, "tag": "start:healthy/force/#3", "state": "stopped", "since_s": 0.065}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:32.543Z", "ts": 1789628492.543, "tag": "start:healthy/force/#3", "state": "pending", "since_s": 1.146}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:35.782Z", "ts": 1789628495.783, "tag": "start:healthy/force/#3", "state": "running", "since_s": 4.386}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:01:41.844Z", "ts": 1789628501.844, "tag": "app:healthy/force/#3", "tick": 19, "since_s": 6.061}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T07:01:42.846Z", "ts": 1789628502.847, "guest_state": "healthy", "mode": "force", "rep": 3, "stop_kwargs": {"Force": true}, "stop_api_seconds": 0.483, "stop_seconds": 16.308, "start_seconds": 4.386, "app_ready_seconds": 7.064}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T07:01:42.846Z", "ts": 1789628502.847, "guest_state": "healthy", "mode": "skip_os", "rep": 3, "stop_kwargs": {"SkipOsShutdown": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:01:42.914Z", "ts": 1789628502.914, "tag": "prep_app", "tick": 40, "since_s": 0.002}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T07:01:44.349Z", "ts": 1789628504.35, "tag": "healthy/skip_os/#3", "stop_kwargs": {"SkipOsShutdown": true}, "api_s": 0.399}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:44.416Z", "ts": 1789628504.416, "tag": "stop:healthy/skip_os/#3", "state": "running", "since_s": 0.066}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:01:45.539Z", "ts": 1789628505.54, "tag": "stop:healthy/skip_os/#3", "state": "stopping", "since_s": 1.19}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:02:01.664Z", "ts": 1789628521.665, "tag": "stop:healthy/skip_os/#3", "state": "stopped", "since_s": 17.315}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:02:02.718Z", "ts": 1789628522.719, "tag": "start:healthy/skip_os/#3", "state": "stopped", "since_s": 0.058}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:02:03.792Z", "ts": 1789628523.793, "tag": "start:healthy/skip_os/#3", "state": "pending", "since_s": 1.131}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:02:07.058Z", "ts": 1789628527.058, "tag": "start:healthy/skip_os/#3", "state": "running", "since_s": 4.397}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:02:12.065Z", "ts": 1789628532.065, "tag": "app:healthy/skip_os/#3", "tick": 20, "since_s": 5.007}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T07:02:13.068Z", "ts": 1789628533.068, "guest_state": "healthy", "mode": "skip_os", "rep": 3, "stop_kwargs": {"SkipOsShutdown": true}, "stop_api_seconds": 0.399, "stop_seconds": 17.315, "start_seconds": 4.397, "app_ready_seconds": 6.01}
+{"schema": "stop_matrix/1", "kind": "trial_begin", "t": "2026-09-17T07:02:13.068Z", "ts": 1789628533.068, "guest_state": "healthy", "mode": "force_skip", "rep": 3, "stop_kwargs": {"Force": true, "SkipOsShutdown": true}}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:02:13.131Z", "ts": 1789628533.132, "tag": "prep_app", "tick": 42, "since_s": 0.002}
+{"schema": "stop_matrix/1", "kind": "stop_api_ok", "t": "2026-09-17T07:02:14.682Z", "ts": 1789628534.683, "tag": "healthy/force_skip/#3", "stop_kwargs": {"Force": true, "SkipOsShutdown": true}, "api_s": 0.525}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:02:14.762Z", "ts": 1789628534.763, "tag": "stop:healthy/force_skip/#3", "state": "running", "since_s": 0.08}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:02:15.867Z", "ts": 1789628535.867, "tag": "stop:healthy/force_skip/#3", "state": "stopping", "since_s": 1.185}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:02:32.462Z", "ts": 1789628552.462, "tag": "stop:healthy/force_skip/#3", "state": "stopped", "since_s": 17.78}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:02:33.439Z", "ts": 1789628553.439, "tag": "start:healthy/force_skip/#3", "state": "stopped", "since_s": 0.119}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:02:34.511Z", "ts": 1789628554.512, "tag": "start:healthy/force_skip/#3", "state": "pending", "since_s": 1.192}
+{"schema": "stop_matrix/1", "kind": "state", "t": "2026-09-17T07:02:36.694Z", "ts": 1789628556.695, "tag": "start:healthy/force_skip/#3", "state": "running", "since_s": 3.375}
+{"schema": "stop_matrix/1", "kind": "app_endpoint_up", "t": "2026-09-17T07:02:42.725Z", "ts": 1789628562.725, "tag": "app:healthy/force_skip/#3", "tick": 11, "since_s": 6.031}
+{"schema": "stop_matrix/1", "kind": "trial_result", "t": "2026-09-17T07:02:43.727Z", "ts": 1789628563.728, "guest_state": "healthy", "mode": "force_skip", "rep": 3, "stop_kwargs": {"Force": true, "SkipOsShutdown": true}, "stop_api_seconds": 0.525, "stop_seconds": 17.78, "start_seconds": 3.375, "app_ready_seconds": 7.033}
+{"schema": "stop_matrix/1", "kind": "summary", "t": "2026-09-17T07:02:43.728Z", "ts": 1789628563.728, "stop_seconds_by_group": {"healthy/force": {"n": 3, "min": 16.308, "median": 18.621, "max": 20.548, "values": [18.621, 20.548, 16.308]}, "healthy/force_skip": {"n": 3, "min": 5.467, "median": 10.969, "max": 17.78, "values": [10.969, 5.467, 17.78]}, "healthy/plain": {"n": 3, "min": 14.171, "median": 16.357, "max": 18.207, "values": [16.357, 14.171, 18.207]}, "healthy/skip_os": {"n": 3, "min": 8.688, "median": 11.996, "max": 17.315, "values": [11.996, 8.688, 17.315]}}, "note": "n 小于 3 的组不足以支撑倍数比较，只能作为单点观测报告"}
+{"schema": "stop_matrix/1", "kind": "run_end", "t": "2026-09-17T07:02:43.728Z", "ts": 1789628563.728, "trials": 12}

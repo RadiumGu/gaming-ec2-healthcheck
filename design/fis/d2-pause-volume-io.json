@@ -1,0 +1,21 @@
+{
+  "description": "ec2-failure drill D2: pause root volume IO to trigger attached-EBS status check",
+  "targets": {
+    "TargetVolume": {
+      "resourceType": "aws:ec2:ebs-volume",
+      "resourceArns": ["arn:aws:ec2:ap-northeast-1:111122223333:volume/vol-REDACTED000000003"],
+      "selectionMode": "ALL"
+    }
+  },
+  "actions": {
+    "pauseIO": {
+      "actionId": "aws:ebs:pause-volume-io",
+      "description": "pause IO for 3 minutes",
+      "parameters": { "duration": "PT3M" },
+      "targets": { "Volumes": "TargetVolume" }
+    }
+  },
+  "stopConditions": [ { "source": "none" } ],
+  "roleArn": "arn:aws:iam::111122223333:role/your-fis-role",
+  "tags": { "Project": "ec2-failure-drill", "Name": "d2-pause-volume-io" }
+}

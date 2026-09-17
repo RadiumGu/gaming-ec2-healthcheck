@@ -1,0 +1,11 @@
+{"kind": "put", "metric": "PublishLatencyProbe-2894439e6f6f", "t_put": 1789636736.5795877, "resolution_s": 60, "t_wall": 1789636736.579589}
+{"kind": "visible", "metric": "PublishLatencyProbe-2894439e6f6f", "t_visible": 1789636737.4510233, "publish_latency_s": 0.871, "polls": 8, "values": [1.0], "t_wall": 1789636737.4510307}
+{"kind": "put", "metric": "PublishLatencyProbe-f9f77705ee67", "t_put": 1789636747.4762714, "resolution_s": 60, "t_wall": 1789636747.4762728}
+{"kind": "visible", "metric": "PublishLatencyProbe-f9f77705ee67", "t_visible": 1789636748.4111662, "publish_latency_s": 0.935, "polls": 9, "values": [1.0], "t_wall": 1789636748.4111733}
+{"kind": "put", "metric": "PublishLatencyProbe-17d21179b735", "t_put": 1789636758.4411557, "resolution_s": 60, "t_wall": 1789636758.441157}
+{"kind": "visible", "metric": "PublishLatencyProbe-17d21179b735", "t_visible": 1789636759.3832064, "publish_latency_s": 0.942, "polls": 9, "values": [1.0], "t_wall": 1789636759.383213}
+{"kind": "put", "metric": "PublishLatencyProbe-00f048595763", "t_put": 1789636769.4162538, "resolution_s": 60, "t_wall": 1789636769.4162552}
+{"kind": "visible", "metric": "PublishLatencyProbe-00f048595763", "t_visible": 1789636770.1231277, "publish_latency_s": 0.707, "polls": 7, "values": [1.0], "t_wall": 1789636770.1231344}
+{"kind": "put", "metric": "PublishLatencyProbe-f4e94dc56686", "t_put": 1789636780.1556888, "resolution_s": 60, "t_wall": 1789636780.1556902}
+{"kind": "visible", "metric": "PublishLatencyProbe-f4e94dc56686", "t_visible": 1789636780.7578003, "publish_latency_s": 0.602, "polls": 6, "values": [1.0], "t_wall": 1789636780.757807}
+{"kind": "summary", "resolution_s": 60, "n": 5, "min_s": 0.602, "median_s": 0.871, "max_s": 0.942, "note": "n>=3，可作范围陈述", "t_wall": 1789636780.7578773}

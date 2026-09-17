@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+
+# 本地运行产物：探测器与编排器的输出、演练临时文件
+*.stderr
+/tmp/
+.venv/
+venv/
+
+# 不要提交任何含真实环境标识的文件
+*-unsanitized.*
+sanitize_for_publish.py
