@@ -100,8 +100,8 @@ if volume I/O is paused for over 60 seconds」。
 | 2 | `DescribeInstanceStatus` 的 `AttachedEbsStatus` | **+155.7 s** | 直接轮询，比指标通道早 63 秒 |
 | 3 | `StatusCheckFailed_AttachedEBS` 告警 | **+218.9 s** | 含 84 秒发布延迟 |
 | 4 | `VolumeQueueLength` 非零升高 | 同指标通道 | 只能作辅证，正常值也非零（0.001–0.005） |
-| ✗ | `VolumeStalledIOCheck` | **永不触发** | 本环境零数据点，不要用 |
-| ✗ | `VolumeReadOps` / `WriteOps` 高于阈值 | **永不触发** | 注入期间归零，方向相反 |
+| 不可用 | `VolumeStalledIOCheck` | **永不触发** | 本环境零数据点，不要用 |
+| 不可用 | `VolumeReadOps` / `WriteOps` 高于阈值 | **永不触发** | 注入期间归零，方向相反 |
 
 又一次印证「直接轮询 API 快于指标通道」：本例快 **63 秒**（155.7 vs 218.9）。
 

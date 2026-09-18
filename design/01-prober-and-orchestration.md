@@ -179,6 +179,15 @@ PROBER_SIDE / UNKNOWN ─► 不动作
 编排器的升级路径因此是「升级到 `SkipOsShutdown`」而不是「升级到 `Force`」，
 代码里 `--skip-os-shutdown` 默认开、`--force-stop` 默认关，升级动作单独打点。
 
+**不做成「先普通 stop、超时再升级」的两段式**，理由是 D11 实测：
+「应用冻死但 OS 正常」这一档普通 stop 要 103.4 秒（systemd 等满 90 秒 `TimeoutStopSec`），
+两段式等于先白等约 100 秒再做本来第一步就该做的事。
+也没有「留一次最后存盘机会」的收益 —— `APP_STUCK` 时主循环已冻住、关机钩子跑不起来，
+`APP_DEAD` 时进程已经没了，而 `stop_start` 只在应用已经不工作时才被调用。
+
+因此默认配置下升级分支不可达，这是**刻意的**；该分支只为显式传 `--no-skip-os-shutdown` 的用户存在。
+已用 `SkipOsShutdown` 仍超时时记 `escalation_exhausted`（`Force` 比它弱，不存在更强选项）。
+
 ### 验收判据：`running` 不等于可服务
 
 编排器的成功判据是 **`app_ready`：健康端点的 tick 在推进**，不是实例 `running`，
@@ -244,7 +253,7 @@ PROBER_SIDE / UNKNOWN ─► 不动作
 | 指标发布延迟 | `[实测]` **约 84 s**，D1 与 D2 两次独立印证 |
 | 恢复段（挂死 guest，`SkipOsShutdown=True`） | `[实测]` **21.8 s**（stop 11.5 + start 3.3 + app_ready 7.0），D8 n=2 |
 | 恢复段（挂死 guest，`Force=True`＝错的参数） | `[实测]` **263.1 s**。`Force` 不跳过优雅关机，对关不掉的 guest 要走完约 252 s 超时 |
-| 停止参数的影响 | `[实测]` 挂死 guest 上 **22 倍**（252.2 s 对 11.5 s）；健康 guest 上四种模式无法区分（n=3 范围全重叠） |
+| 停止参数的影响 | `[实测]` 三档：**应用冻死、OS 正常** 上 **18.2 倍**（103.4 s 对 5.7 s，D11）；挂死 guest 上 **22 倍**（252.2 s 对 11.5 s，D8）；健康 guest 上四种模式无法区分（n=3 范围全重叠）。差异在「应用不响应 `SIGTERM`」时暴露，而恢复动作从不作用于健康实例 |
 | attached EBS check | `[实测]` +155.7 s；卷状态 API 更早，+112.7 s |
 | `VolumeStalledIOCheck` | `[实测]` **零数据点，与 AWS 文档矛盾，不可用** |
 | auto recovery race | `[实测]` 本例未相撞（guest 侧故障不激活 AWS 那一侧）；宿主机真故障时的相撞行为仍 `[待测]` |

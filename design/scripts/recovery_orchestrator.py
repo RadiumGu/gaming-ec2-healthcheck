@@ -322,8 +322,23 @@ class Orchestrator:
             return False
 
         if not self.wait_state("stopped", self.a.stop_timeout, "stop"):
-            # 升级路径：若本次没用 SkipOsShutdown，超时后改用它 ——
+            # 升级路径：若本次没用 SkipOsShutdown，超时后改用它。
             # 这是唯一能绕过 OS 关机流程的参数，Force 做不到。
+            #
+            # **注意：默认配置下这个分支不可达，这是刻意的。**
+            # `--skip-os-shutdown` 默认开，所以第一次调用就已经用了它，
+            # 直接落到下面的 else。该分支只为显式传了 `--no-skip-os-shutdown`
+            # 的用户存在。
+            #
+            # 为什么不做成「先普通 stop、超时再升级」的两段式：D11 实测
+            # 「OS 存活但应用冻死」这一档（也就是 APP_STUCK 最常见的形态），
+            # 普通 stop 要 99.3–103.4 s —— systemd 等满 TimeoutStopSec
+            # （AL2023 默认 90 s）才 SIGKILL；而 SkipOsShutdown 只要 5.6 s。
+            # 两段式等于先白等 100 秒再做本来就该做的事。
+            #
+            # 也没有「留一次最后存盘机会」的收益可言：APP_STUCK 时主循环已冻住、
+            # 关机钩子跑不起来；APP_DEAD 时进程已经没了。stop_start 只会在
+            # 应用已经不工作时被调用，所以优雅关机没有可挽救的对象。
             if not mode.get("SkipOsShutdown"):
                 self.log.emit("escalate", to="skip_os_shutdown",
                               note="停止未在超时内完成，改用 SkipOsShutdown=True 绕过 OS 关机流程")
@@ -337,6 +352,16 @@ class Orchestrator:
                 if not self.wait_state("stopped", self.a.stop_timeout, "skip_os_shutdown"):
                     return False
             else:
+                # 已经用了 SkipOsShutdown 还超时：**没有更强的参数可升级了**。
+                # Force 比它弱（Force 会先试优雅关机），所以不存在下一档。
+                # 明确记录这一点，避免读日志的人以为是漏了处理分支。
+                self.log.emit(
+                    "escalation_exhausted",
+                    already_used="SkipOsShutdown=True",
+                    note="停止已用最强参数仍超时，无更强选项可升级。"
+                         "此时通常意味着 EC2 控制面侧问题而非 guest 侧，"
+                         "需人工介入或走备机池路线",
+                    stop_timeout=self.a.stop_timeout)
                 return False
 
         try:

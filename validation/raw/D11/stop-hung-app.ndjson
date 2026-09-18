@@ -1,0 +1,19 @@
+{"kind": "run_begin", "instance_id": "i-TARGET00000000004", "reps": 2, "schema": "d11/1", "ts": 1789658059.6820729, "t": "2026-09-17T15:14:19Z"}
+{"kind": "service_installed", "status": "Success", "detail": "active\nTimeoutStopUSec=1min 30s", "schema": "d11/1", "ts": 1789658065.920077, "t": "2026-09-17T15:14:25Z"}
+{"kind": "trial_begin", "mode": "plain", "rep": 1, "stop_kwargs": {}, "schema": "d11/1", "ts": 1789658065.9201615, "t": "2026-09-17T15:14:25Z"}
+{"kind": "trial_result", "mode": "plain", "rep": 1, "api_seconds": 0.517, "stop_seconds": 99.301, "schema": "d11/1", "ts": 1789658165.7379475, "t": "2026-09-17T15:16:05Z"}
+{"kind": "restarted", "running_seconds": 3.359, "schema": "d11/1", "ts": 1789658170.0551374, "t": "2026-09-17T15:16:10Z"}
+{"kind": "service_installed", "status": "Success", "detail": "active\nTimeoutStopUSec=1min 30s", "schema": "d11/1", "ts": 1789658186.3351011, "t": "2026-09-17T15:16:26Z"}
+{"kind": "trial_begin", "mode": "skip_os", "rep": 1, "stop_kwargs": {"SkipOsShutdown": true}, "schema": "d11/1", "ts": 1789658186.335186, "t": "2026-09-17T15:16:26Z"}
+{"kind": "trial_result", "mode": "skip_os", "rep": 1, "api_seconds": 0.452, "stop_seconds": 5.573, "schema": "d11/1", "ts": 1789658192.3603656, "t": "2026-09-17T15:16:32Z"}
+{"kind": "restarted", "running_seconds": 3.42, "schema": "d11/1", "ts": 1789658196.7901409, "t": "2026-09-17T15:16:36Z"}
+{"kind": "service_installed", "status": "Success", "detail": "active\nTimeoutStopUSec=1min 30s", "schema": "d11/1", "ts": 1789658213.0215278, "t": "2026-09-17T15:16:53Z"}
+{"kind": "trial_begin", "mode": "plain", "rep": 2, "stop_kwargs": {}, "schema": "d11/1", "ts": 1789658213.0215995, "t": "2026-09-17T15:16:53Z"}
+{"kind": "trial_result", "mode": "plain", "rep": 2, "api_seconds": 0.448, "stop_seconds": 103.428, "schema": "d11/1", "ts": 1789658316.896743, "t": "2026-09-17T15:18:36Z"}
+{"kind": "restarted", "running_seconds": 3.409, "schema": "d11/1", "ts": 1789658321.2748435, "t": "2026-09-17T15:18:41Z"}
+{"kind": "service_installed", "status": "Success", "detail": "active\nTimeoutStopUSec=1min 30s", "schema": "d11/1", "ts": 1789658337.5395403, "t": "2026-09-17T15:18:57Z"}
+{"kind": "trial_begin", "mode": "skip_os", "rep": 2, "stop_kwargs": {"SkipOsShutdown": true}, "schema": "d11/1", "ts": 1789658337.539621, "t": "2026-09-17T15:18:57Z"}
+{"kind": "trial_result", "mode": "skip_os", "rep": 2, "api_seconds": 0.523, "stop_seconds": 5.678, "schema": "d11/1", "ts": 1789658343.7406013, "t": "2026-09-17T15:19:03Z"}
+{"kind": "restarted", "running_seconds": 4.409, "schema": "d11/1", "ts": 1789658349.130966, "t": "2026-09-17T15:19:09Z"}
+{"kind": "service_installed", "status": "Success", "detail": "active\nTimeoutStopUSec=1min 30s", "schema": "d11/1", "ts": 1789658365.3748484, "t": "2026-09-17T15:19:25Z"}
+{"kind": "summary", "results": {"plain": {"n": 2, "min": 99.301, "median": 103.428, "max": 103.428, "values": [99.301, 103.428]}, "skip_os": {"n": 2, "min": 5.573, "median": 5.678, "max": 5.678, "values": [5.573, 5.678]}}, "note": "n<3 不支撑倍数比较；本实验只用于判断量级差异", "schema": "d11/1", "ts": 1789658365.374948, "t": "2026-09-17T15:19:25Z"}

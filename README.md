@@ -32,21 +32,28 @@
 3. CloudWatch 指标发布延迟实测 **84 秒**（两次独立印证），
    自定义指标只要 **0.871 秒**（约 95 倍差异）。
 
-### 恢复：一个 API 参数造成 22 倍差异
+### 恢复：一个 API 参数造成 18–22 倍差异
 
-对**已经挂死、关不掉**的实例：
+停止参数的影响取决于 guest 处于什么状态。三档都测了：
 
-| 停止方式 | `stopping → stopped` 耗时 |
-|---|---|
-| **`SkipOsShutdown=True`** | **11.5 秒** |
-| `Force=True` | **252 秒** |
+| guest 状态 | 应用响应 `SIGTERM`？ | 普通 stop | `SkipOsShutdown=True` | 差异 |
+|---|---|---|---|---|
+| 健康 | 响应，正常退出 | 16.4 s | 12.0 s | **不可断言**（n=3 区间重叠） |
+| **应用冻死、OS 正常** | **不响应** | **103.4 s** | **5.7 s** | **18.2 倍** |
+| 内核已死 | 内核都没了 | 252.2 s | 11.5 s | 22 倍 |
 
 `Force=True` **不跳过优雅关机** —— API 参考原文是「先尝试优雅关机、超时后才硬下电」。
-真正绕过 OS 关机的是 `SkipOsShutdown=True`。这两个参数在健康实例上表现无法区分
-（四种模式 n=3 范围全重叠），**差异只在「关不掉的实例」上暴露**，
-所以日常演练发现不了。
+真正绕过 OS 关机的是 `SkipOsShutdown=True`。
 
-端到端：检测 15.5 秒 + 恢复 21.8 秒 ≈ **37 秒**。
+中间那一档最常被忽略，也最常发生：进程不响应 `SIGTERM` 时，
+systemd 要等满 `TimeoutStopSec`（Amazon Linux 2023 默认 **90 秒**）才 SIGKILL。
+
+**差异在「应用不响应 `SIGTERM`」时暴露，唯一看不出差异的是健康实例
+—— 而恢复动作从不作用于健康实例。** 这带来一个演练陷阱：
+拿健康实例演练「验证恢复流程」，两种参数看起来一样快，
+这个 18–22 倍的缺陷在演练中完全不暴露。
+
+端到端：检测 15.5 秒 + 恢复 21.8 秒 ≈ **37 秒**（用内核已死那一档算，属保守口径）。
 
 ### 判据：端口通和响应码对都不够
 
@@ -81,6 +88,7 @@
 | `ec2_forensics.py` | 常驻取证采集，三层时间轴分开记 |
 | `game_stub.py` | 演练用被测桩程序，可注入卡死与检查点失败 |
 | `stop_matrix.py` | 停止模式对比实验编排 |
+| `stop_hung_app.py` | 第三档停止耗时实验：应用冻死但 OS 存活 |
 | `metric_publish_latency.py` | 自定义指标发布延迟测量 |
 | `alarm_action_test.py` | 告警动作可注入性测试 |
 | `timeline.py` | 分段耗时折叠分析 |
@@ -106,7 +114,8 @@
 |---|---|
 | `10-customer-briefing.md` | **完整汇报，13 章 + 附录，先看这个** |
 | `D8-stop-mode-matrix.md` | 推翻了第一轮的头条结论（`SkipOsShutdown` vs `Force`） |
-| `D10-...-alarm-actions.md` | 指标延迟、卷型盲区（含一个已修复的误动作缺陷）、告警动作可注入性 |
+| `D11-stop-hung-app.md` | 补上 D8 缺的第三档，**修正了「差异只在关不掉的实例上暴露」这个不准确表述** |
+| `D10-metric-latency-volume-type-alarm-actions.md` | 指标延迟、卷型盲区（含一个已修复的误动作缺陷）、告警动作可注入性 |
 | `D0-D5-probe-criteria.md` | 探测判据选型的三个判决性实验 |
 | `D9-storage-side-channel.md` | 存储旁路真机验证 |
 | `D2-ebs-status-check.md` | 存储盲区与 `VolumeStalledIOCheck` 陷阱 |
@@ -162,7 +171,9 @@ python3 recovery_orchestrator.py \
 # 确认动作阶梯无误后，加 --apply 真正执行
 ```
 
-`--skip-os-shutdown` 默认开、`--force-stop` 默认关。这个默认值是实测结论。
+`--skip-os-shutdown` 默认开、`--force-stop` 默认关。这个默认值是实测结论 ——
+而且依据被换过一次：原先拿健康实例那组论证，但健康实例的应用会响应 `SIGTERM`、
+从来碰不到 systemd 超时，等于用错了条件。D11 补测了真正相关的那一档，结论不变但依据成立。
 
 ---
 
